@@ -20,7 +20,7 @@ function fetchMovie(e){
     
     // collecting the value of movie name that we searched
     let searchText = input.value;
-    fetch(`http://www.omdbapi.com/?s=${input.value}&apikey=${apikey}`)
+    fetch(`https://www.omdbapi.com/?s=${input.value}&apikey=${apikey}`)
     .then((res) =>
     { 
         return res.json()
