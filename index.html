@@ -9,35 +9,38 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+
+
     <div id="heading">
+        <!-- Page Heading -->
             <h1 class='h1'>Movies Info App</h1>
 
+            <!-- container for favourite movies -->
             <div id="fav-movie-list-heading">
                 <h2> Favourite Movie's list</h2>
+            <!-- search again button -->
                 <button id='search-again'> Search Again</button>
             </div>
             
             <div id="search-content">
                 <form id='form'>
+                    <!-- using input tag to search your movies -->
                     <input type="text" placeholder="What are you looking for?" id="search-movies" > 
-                    <button id="submit" type="submit"> Search</button>
+                    <!-- search button -->
+                    <button id="submit" type="submit"> Search</button>    
                 </form>
-                <button class="fav-btn">Favourite's</button>
+                <!-- Favourite's button -->
+                <button class="fav-btn">Fav's</button>
             </div>
     </div>
     
+    <!-- using img-container to store output-->
+    <div id="img-container"></div>
 
-    <div id="img-container">
-       
-    </div>
-
-    
-    <div id="fav-container">
-   
-    </div>
+    <!--using fav-container to sotre your favourite movies -->
+    <div id="fav-container"></div>
    
 </body>
 
-<!-- <script src="./style.js"></script> -->
 <script src="./script.js"></script>
 </html>

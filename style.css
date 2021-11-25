@@ -250,7 +250,7 @@ form input{
         width: 17vw;
     }
 }
-
+/* media query for screen size 1200px */
 @media only screen and (max-width: 1200px) {
   
     .movie-img{
@@ -258,7 +258,7 @@ form input{
 
     }
 }
-
+/* media query for screen size 1000px */
 @media only screen and (max-width: 1000px){
   
     .movie-img{
@@ -271,7 +271,7 @@ form input{
     
 } 
 
-
+/* media query for screen size 720px */
 @media only screen and (max-width: 720px) {
 
     .movie{
@@ -315,7 +315,8 @@ form input{
     
 
     .movie-img{
-        max-width: 35vw;
+        /* max-width: 35vw; */
+        width: 35vw;
     }
     /* decrease font size of Favourite's button */
     .fav-btn{
@@ -323,24 +324,48 @@ form input{
     }    
 }
 
-
+/* media query for screen size 479px */
 @media only screen and (max-width:479px){
 
     .movie-img{
-        width: 40vw;
+        width: 55vw;
     }
 
     #submit{
-        margin-left: -1.5rem;
+        margin-left: 1rem;
         font-size: .9rem;
     }
 
     form input{
-        left: 1rem;
-        width: 60%;
+        width: 55%;
     }
     .fav-btn{
         font-size: .8rem;
         margin-left: -2.5rem;
+    }
+
+    #heading{
+        height: 20vh;
+    }
+
+    #heading h1{
+        font-size: 2rem;
+        position: relative;
+        top: -1.2rem;
+    }
+
+    #img-container{
+        flex-direction: column;
+    }
+    #fav-movie-list-heading h2{
+        position: relative;
+        font-size: 1.3rem;
+        top: -1.3rem;
+    }
+
+    #search-again{
+        font-size: .7rem;
+        position: relative;
+        top: -1.5rem;
     }
 }
