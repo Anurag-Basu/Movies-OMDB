@@ -39,8 +39,8 @@
    padding: 10px 5px;
    text-align: center;
    font-size: 1rem;
-   text-transform: uppercase;
    transition: 0.5s;
+   font-weight : bolder;
    background-size: 200% auto;
    color: white;            
    border-radius: 10px;
@@ -64,11 +64,13 @@
     padding-top: 2rem;
 ]}
 
-
-form{
+#search-content{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+form{
     width: 100%;
     padding-top: 1rem;
 }
@@ -84,6 +86,8 @@ form input{
     font-size: 1.2rem;
     width: 70%;
     border-radius: 20px;
+    left: .5rem;
+    position: relative;
 }
 
 /* set background color/padding/border-radius and font weight */
@@ -103,19 +107,19 @@ form input{
 .fav-btn{background-image: linear-gradient(to right, #1FA2FF 0%, #12D8FA  51%, #1FA2FF  100%)}
 
 .fav-btn{
-    margin-left: .5rem;
     position: relative;
     left: -.5rem;
     padding: .6rem;
-   font-size: 1rem;
-   font-weight: bolder;
-   text-align: center;
-   transition: 0.5s;
-   background-size: 200% auto;
-   color: white;            
-   box-shadow: 0 0 20px #eee;
-   border-radius: 20px;
-   display: block;
+    font-size: 1rem;
+    font-weight: bolder;
+    text-align: center;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 20px;
+    display: block;
+    margin-top: 1rem;
  }
 
 
@@ -129,18 +133,39 @@ form input{
 /* Container that contain movie output */
 #img-container{
     height: auto;
+    color: black;
+    margin-top: .5rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    /* background-color: red; */
+    justify-content: space-around;
+}
+
+.movie{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    color: black;
-    margin-top: .5rem;
+    width: 30vw;
+    height: auto;
+    text-align: center;
+    margin-bottom: 10px;
+    /* margin-right: 6vw; */
+}
+/*  */
+
+/* add font-weight and font size to h2 tag insdie image container */
+#img-container h2{
+    text-align: center;
+    font-weight: bolder;
+    font-size: 1.5rem;
 }
 
-
 /* adding some height-width and some transition  */
-#img-container img{
-    max-width: 45vw;
+.movie-img{
+    width: 18vw;
     height: 45vh;
     border: 2px solid black;
     border-radius: 20px;
@@ -153,32 +178,21 @@ form input{
     text-decoration: none;
 }
 
-/* add font-weight and font size to h2 tag insdie image container */
-#img-container h2{
-    font-weight: bolder;
-    font-size: 2.5rem;
-}
-
-
-
-
 
 /* Favourite container which contain our favourite movies list */
 #fav-container{
-    min-height: 20vh;
-    max-height: auto;
-    background: red;
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
     color: black;
     margin-top: .5rem;
+    display: none;
 }
 
-
-
-
+/* remove underline form a tag */
+#fav-container a{
+    text-decoration: none;
+}
 
 
  /*adding some background, gradient or amiation in View IMDB  button  */
@@ -203,13 +217,12 @@ form input{
   }
 
 /* adding some background, gradient and aminatin to ADD TO FAVOURITES  button */
-  #fav-btn {background-image: linear-gradient(to right, #FF512F 0%, #DD2476  51%, #FF512F  100%)}
-  #fav-btn {
+  .fav-movie-btn {background-image: linear-gradient(to right, #FF512F 0%, #DD2476  51%, #FF512F  100%)}
+  .fav-movie-btn {
      margin: 5px;
      padding: 10px 20px;
      text-align: center;
      font-weight: bolder;
-     text-transform: uppercase;
      transition: 0.5s;
      background-size: 200% auto;
      color: white;            
@@ -219,14 +232,57 @@ form input{
    }
 
    /* hover effect on ADD TO FAVOURITES BUTTON */
-   #fav-btn:hover {
+   .fav-movie-btn:hover {
      background-position: right center; 
      color: #fff;
      text-decoration: none;
    }
   
+
+
+
 /* using media query to make site responsive */
-@media only screen and (max-width: 600px) {
+
+
+@media only screen and (max-width:1500px){
+    
+    .movie-img{
+        width: 17vw;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+  
+    .movie-img{
+        width: 19vw;
+
+    }
+}
+
+@media only screen and (max-width: 1000px){
+  
+    .movie-img{
+        width: 25vw;
+    }
+    .fav-movie-btn,
+    .btn-grad{
+        font-size: 1.1rem;
+    }
+    
+} 
+
+
+@media only screen and (max-width: 720px) {
+
+    .movie{
+        width: 50vw;
+        background-color: #fff;
+    }
+
+    .fav-movie-btn,
+    .btn-grad{
+        font-size: .8rem;
+    }
     /* removing left margin and increse width to 100% of heading tag */
     #heading{
         width: 100%;
@@ -242,6 +298,7 @@ form input{
         padding: .5em;
         position: relative;
         font-size: 1em;
+        left: .3rem;
     }
     /* decrease some padding and font size of submit button */
     #submit{
@@ -249,13 +306,41 @@ form input{
         font-size: 1em;
     }
 
+        
+    #img-container h2{
+        font-weight: bolder;
+        font-size: 1.3rem;
+    }
+
     
-#img-container h2{
-    font-weight: bolder;
-    font-size: 1.5rem;
+
+    .movie-img{
+        max-width: 35vw;
+    }
+    /* decrease font size of Favourite's button */
+    .fav-btn{
+        font-size: 0.8rem;
+    }    
 }
-/* decrease font size of Favourite's button */
-.fav-btn{
-    font-size: 0.8rem;
-}
+
+
+@media only screen and (max-width:479px){
+
+    .movie-img{
+        width: 40vw;
+    }
+
+    #submit{
+        margin-left: 1.5rem;
+        font-size: .9rem;
+    }
+
+    form input{
+        left: 1rem;
+        width: 60%;
+    }
+    .fav-btn{
+        font-size: .8rem;
+        margin-left: -2.5rem;
+    }
 }
